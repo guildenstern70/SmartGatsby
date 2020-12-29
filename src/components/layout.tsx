@@ -7,7 +7,6 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-import Header from "./header";
 import "./layout.css";
 
 const Layout: React.FC = ({ children }) => {
@@ -22,17 +21,19 @@ const Layout: React.FC = ({ children }) => {
 	`);
 
 	return (
-		<>
-			<Header siteTitle={data.site.siteMetadata.title} />
-			<div>
+			<div className='layout'>
 				<main>{children}</main>
 				<footer>
-					{data.site.siteMetadata.title} © Alessio Saltarin {new Date().getFullYear()}, Built with
-					{` `}
-					<a href="https://www.gatsbyjs.org">Gatsby</a>
+					<div className='float-end'>
+						<small>
+							<span className='text-primary'>{data.site.siteMetadata.title}</span>
+							© Alessio Saltarin {new Date().getFullYear()}, Built with
+							&nbsp;
+							<a href="https://www.gatsbyjs.org">Gatsby</a>
+						</small>
+					</div>
 				</footer>
 			</div>
-		</>
 	);
 };
 

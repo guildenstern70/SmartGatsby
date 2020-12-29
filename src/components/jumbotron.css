@@ -1,6 +1,12 @@
 .jumbotron {
     padding: 2rem 1rem;
-    margin: 2rem 8rem 5rem 8rem;
+    margin: 2rem 3rem 5rem 3rem;
     background-color: #9db4cd;
     border-radius: .3rem;
+}
+
+
+.jumbotitle {
+    color: bisque;
+    font-weight: bold;
 }
