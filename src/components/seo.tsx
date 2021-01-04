@@ -1,45 +1,31 @@
-/* eslint-disable no-unused-vars */
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
  */
 
 import * as React from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-
-interface SEOMeta {
-	content: any;
-	name: string;
-	property?: undefined;
-}
 
 interface SEOProps {
 	description?: string;
 	lang?: string;
-	meta: SEOMeta[];
 	title: string;
 }
 
-const SEO = ({ description, lang, meta, title }: SEOProps) => {
+const SEO: React.FC<SEOProps> = ({ description, lang, title }: SEOProps) => {
 	const { site } = useStaticQuery(
 		graphql`
 			query {
 				site {
 					siteMetadata {
 						title
-						description
-						author
 					}
 				}
 			}
 		`
 	);
-
-	const metaDescription = description || site.siteMetadata.description;
 
 	return (
 		<Helmet
@@ -48,55 +34,16 @@ const SEO = ({ description, lang, meta, title }: SEOProps) => {
 			}}
 			title={title}
 			titleTemplate={`%s | ${site.siteMetadata.title}`}
-			meta={[
-				{
-					name: `description`,
-					content: metaDescription
-				},
-				{
-					property: `og:title`,
-					content: title
-				},
-				{
-					property: `og:description`,
-					content: metaDescription
-				},
-				{
-					property: `og:type`,
-					content: `website`
-				},
-				{
-					name: `twitter:card`,
-					content: `summary`
-				},
-				{
-					name: `twitter:creator`,
-					content: site.siteMetadata.author
-				},
-				{
-					name: `twitter:title`,
-					content: title
-				},
-				{
-					name: `twitter:description`,
-					content: metaDescription
-				}
-			].concat(meta)}
-		/>
+		>
+			<meta name="description" content={description} />
+		</Helmet>
 	);
 };
 
 SEO.defaultProps = {
-	lang: `en`,
-	meta: [],
-	description: ``
-};
-
-SEO.propTypes = {
-	description: PropTypes.string,
-	lang: PropTypes.string,
-	meta: PropTypes.arrayOf(PropTypes.object),
-	title: PropTypes.string.isRequired
+	title: 'SmartGatsby',
+	lang: 'en',
+	description: ''
 };
 
 export default SEO;

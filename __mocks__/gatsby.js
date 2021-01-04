@@ -1,3 +1,9 @@
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
+ */
+
 /* eslint-disable no-unused-vars */
 const React = require("react");
 const gatsby = jest.requireActual("gatsby");

@@ -1,3 +1,9 @@
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
+ */
+
 module.exports = {
 	transform: {
 		"^.+\\.[jt]sx?$": "<rootDir>/jest-preprocess.js"

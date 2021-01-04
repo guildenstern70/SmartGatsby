@@ -1,13 +1,16 @@
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 
 body {
 	font-family: 'Rubik', Verdana;
 }
 
-.layout {
-	margin-left: 3em;
-	margin-right: 3em;
-}
+
 
 
 

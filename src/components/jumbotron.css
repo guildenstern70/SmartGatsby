@@ -1,8 +1,15 @@
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
+ */
+
 .jumbotron {
     padding: 2rem 1rem;
-    margin: 2rem 3rem 5rem 3rem;
-    background-color: #9db4cd;
+    margin: 1rem 0rem 5rem 0rem;
+    background-color: #b6c9dd;
     border-radius: .3rem;
+    display: block;
 }
 
 

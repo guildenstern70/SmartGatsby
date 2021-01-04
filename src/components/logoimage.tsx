@@ -1,4 +1,9 @@
-/* eslint-disable no-unused-vars */
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
+ */
+
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -14,20 +19,20 @@ import Img from "gatsby-image";
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image: React.FC = () => {
+const LogoImage: React.FC= () => {
 	const data = useStaticQuery(graphql`
 		query {
-			placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+			placeholderImage: file(relativePath: { eq: "gatsby-icon.png" }) {
 				childImageSharp {
-					fluid(maxWidth: 300) {
-						...GatsbyImageSharpFluid
+					fixed(width: 60, height: 60) {
+						...GatsbyImageSharpFixed
 					}
 				}
 			}
 		}
 	`);
 
-	return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+	return <Img fixed={data.placeholderImage.childImageSharp.fixed} />;
 };
 
-export default Image;
+export default LogoImage;

@@ -1,3 +1,9 @@
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
+ */
+
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import { Link } from "gatsby";

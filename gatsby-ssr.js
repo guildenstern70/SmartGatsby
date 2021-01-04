@@ -1,3 +1,9 @@
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
+ */
+
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
  *

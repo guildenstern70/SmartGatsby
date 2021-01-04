@@ -1,4 +1,9 @@
-/* eslint-disable no-unused-vars */
+/*
+ * Project SmartGatsby
+ * Copyright (c) Alessio Saltarin 2021
+ * Licensed under MIT license
+ */
+
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
