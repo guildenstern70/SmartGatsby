@@ -28,7 +28,7 @@ const IndexPage: React.FC = () => {
 				<div className="col">
 					<Jumbotron subtitle={"Built with Gatsby"}
              description={"A Gatsby template that makes use of Bootstrap 5 and TypeScript"}
-             linkUrl={"#"} linkTitle={"Login"} />
+             linkUrl={"/login"} linkTitle={"Login"} />
 				</div>
 			</div>
 			<div className="row">

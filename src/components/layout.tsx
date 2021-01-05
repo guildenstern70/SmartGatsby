@@ -8,12 +8,16 @@ import * as React from "react"
 
 import "./layout.css";
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutProps {
+	children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
 
 	return (
 		<main>
 			<div className='container'>
-				{children}
+				{props.children}
 			</div>
 		</main>
 	);

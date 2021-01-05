@@ -8,6 +8,15 @@
 
 body {
 	font-family: 'Rubik', Verdana;
+	background-color: #f5f5f5;
+}
+
+form {
+	font-family: 'Rubik', Verdana;
+}
+
+input {
+	font-family: 'Rubik', Verdana;
 }
 
 
