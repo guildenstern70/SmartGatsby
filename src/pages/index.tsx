@@ -31,7 +31,7 @@ const IndexPage: React.FC = () => {
              linkUrl={"/login"} linkTitle={"Login"} />
 				</div>
 			</div>
-			<div className="row">
+			<div className="row mt-5 footerspace">
 				<div className="col">
 					<Footer />
 				</div>

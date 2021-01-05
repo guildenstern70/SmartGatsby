@@ -8,7 +8,7 @@
 import * as React from "react";
 import "./login.css"
 import Layout from "../components/layout";
-import {navigate} from 'gatsby';
+import { Link, navigate } from "gatsby";
 // @ts-ignore
 import logo from "../images/gatsby-icon.png";
 
@@ -41,7 +41,7 @@ export default class LoginPage extends React.Component<never, LoginState> {
 
   onSubmit() {
     if (this.state.username.length > 0 && this.state.password.length > 0)
-      navigate('/page-2');
+      navigate('/main');
   }
 
   render(): React.ReactNode {
@@ -51,7 +51,7 @@ export default class LoginPage extends React.Component<never, LoginState> {
           <div className="loginform form-signin text-center mt-5">
             <img className="mb-4" src={logo} alt="Gatsby Logo" width="60" />
             <form>
-              <h1 className="h4 mb-3 fw-normal">Please sign in</h1>
+              <h1 className="h4 mb-3 fw-normal text-primary">Please sign in</h1>
               <label htmlFor="inputEmail" className="visually-hidden">Username</label>
               <input type="text" id="inputEmail" className="form-control" placeholder="Username"
                      value={this.state.username}
@@ -69,7 +69,8 @@ export default class LoginPage extends React.Component<never, LoginState> {
                 </label>
               </div>
               <button className="w-100 btn btn-lg btn-primary" type="button" onClick={this.onSubmit}>Sign in</button>
-              <p className="mt-5 mb-3 text-muted">Try with 'guest/guest'</p>
+              <p className="mt-5 mb-3 text-muted">Try with 'guest/guest'<br />
+              or just <Link to={"/main"}>skip it</Link></p>
             </form>
           </div>
         </div>

@@ -4,7 +4,6 @@
  * Licensed under MIT license
  */
 
-/* eslint-disable no-unused-vars */
 import * as React from "react";
 
 import Layout from "../components/layout";

@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
 	return (
 		<footer>
-			<div>
+			<div className="text-center mb-5">
 				<small>
 					<span className='text-primary'>{data.site.siteMetadata.title}</span>
 					© Alessio Saltarin {new Date().getFullYear()}, Built with
